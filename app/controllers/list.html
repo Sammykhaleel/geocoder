@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+    <label for="filename">I need to:</label>
+
+  <a id="record_button" onclick="recordToFilename();" href="javascript:void(0);" title="Record">Record</a>
+   <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script> 
+<script> 
+$('#header li ul').each(function(){
+    $(this).append('<li class="classname"><a href="#">jQuery added this</a></li>');
+});
+
+// $(document).keypress(function(event) {
+//     var keycode = (event.keyCode ? event.keyCode : event.which);
+//     var input = document.getElementById('label'),
+//         label = input.value;
+//     if(keycode == '13') {
+//         alert('You pressed a "enter" key in somewhere'); 
+//         // $('#list').prepend('sammy'); 
+//        var user = $( "#input-field-id" );
+//        user.val( user.val() + "more text" );      
+//     }
+//     if (label) {
+//         alert('Recording: ' + label);
+//         // Recorder.record('audio', fileName);
+//     } else {
+//         alert('Please enter a filename!');
+//         input.focus();
+//     }
+// });
+
+
+function recordToFilename() {
+    var input = document.getElementById('filename'),
+        fileName = input.value;
+    if (fileName) {
+        alert('Recording: ' + fileName);
+        // Recorder.record('audio', fileName);
+    } else {
+        alert('Please enter a filename!');
+        input.focus();
+    }
+}
+
+  (function ($) {
+    jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+    };
+   
+    function listFilter(header, list) {
+    var form = $("<form>").attr({"class":"filterform","action":"#"}),
+      input = $("<input>").attr({"class":"filterinput","type":"text"});
+    $(form).append(input).appendTo(header);
+   
+    $(input)
+      .change( function () {
+      var filter = $(this).val();
+      if(filter) {
+        $(list).find("a:not(:Contains(" + filter + "))").parent().slideUp();
+        $(list).find("a:Contains(" + filter + ")").parent().slideDown();
+      } else {
+        $(list).find("li").slideDown();
+      }
+      return false;
+      })
+    .keyup( function () {
+      $(this).change();
+    });
+    }
+  
+    $(function () {
+    listFilter($("#header"), $("#list"));
+    });
+  }(jQuery));
+</script> 
+ 
+</head> 
+<body> 
+<div id="wrap"> 
+    <h1 id="header">DVD Collection</h1> 
+    <ul id="list"> 
+        <li><a href="#">Batman</a></li> 
+        <li><a href="#">Ice Age</a></li> 
+        <li><a href="#">Star Trek (2009)</a></li> 
+        <li><a href="#">Tremors</a></li> 
+    </ul> 
+</div> 
+</body>
+</html>
+
+// We have 10 villeges [villege(0)..villege(9)] i'd only take 9 villages let say [villege(1)..villege(9)], now we take number of bars from each villege that's equal to the villege(number/index) like below.
+villege(1) we take 1 bar.
+villege(4) we take 4 bars.
+villege(9) we take 9 bars.
+And that's going to give us 45 bars in total. Now we put the bars on the scale and that should give us 45 * 1000g = 45000g assuming no one of these 9 villeges cheated which mean villege(0) was cheating.
+else if the total was < 45000 now we can determine which village by the deference in total in g e.g. if the total was 44996 that mean 45000-44996 = 4g which indicate that villege(4) was cheating assuming they were pay 999g on each bar. 
