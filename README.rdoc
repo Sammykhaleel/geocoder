@@ -1,28 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+IMPORTANT
 
-Things you may want to cover:
+Runing the application for the first time.
 
-* Ruby version
+When installing the application in new machine there are few steps we need to follow.
 
-* System dependencies
+1.In the terminal run "git clone git@github.com:Sammykhaleel/geocoder.git" to get a copy of the application in your local machine.
 
-* Configuration
+2.Run the command "rake db:migrate" to setup our data base.
 
-* Database creation
+4.Type "rails s" in the terminal to lunch the server 
 
-* Database initialization
+5.In the browser go to the address http://localhost:3000/
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+After that you only need to run "rails s" and lunch the local server (http://localhost:3000/).
