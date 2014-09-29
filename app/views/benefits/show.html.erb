@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @benefit.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @benefit.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @benefit.longitude %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @benefit.site %>
+</p>
+
+<%= link_to 'Edit', edit_benefit_path(@benefit) %> |
+<%= link_to 'Back', benefits_path %>

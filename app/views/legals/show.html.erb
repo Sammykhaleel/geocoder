@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @legal.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @legal.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @legal.longitude %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @legal.site %>
+</p>
+
+<%= link_to 'Edit', edit_legal_path(@legal) %> |
+<%= link_to 'Back', legals_path %>

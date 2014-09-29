@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @employment.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @employment.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @employment.longitude %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @employment.site %>
+</p>
+
+<%= link_to 'Edit', edit_employment_path(@employment) %> |
+<%= link_to 'Back', employments_path %>

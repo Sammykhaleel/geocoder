@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @healthcare.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @healthcare.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @healthcare.longitude %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @healthcare.site %>
+</p>
+
+<%= link_to 'Edit', edit_healthcare_path(@healthcare) %> |
+<%= link_to 'Back', healthcares_path %>

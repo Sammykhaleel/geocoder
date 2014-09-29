@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  resources :legals
+
+  resources :sports
+
+  resources :benefits
+
+  resources :employments
+
+  resources :housings
+
+  resources :healthcares
+
+  resources :educations
+
   resources :locations
 
   # The priority is based upon order of creation: first created -> highest priority.
